@@ -6,10 +6,10 @@ export const resolvers = [
     Date: new GraphQLScalarType({
       name: 'Date',
       description: 'Date custom scalar type',
-      parseValue(value: string | Date | number) {
+      parseValue(value: any) {
         return new Date(value); // value from the client
       },
-      serialize(value?: Date) {
+      serialize(value: any) {
         if (value && value.getTime) {
           return value.getTime(); // value sent to the client
         }
