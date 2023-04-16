@@ -1,3 +1,5 @@
 export const mutations = `
-  type Mutation {}
+  type Mutation {
+    setUser(name: String!): String # TODO: Remove
+  }
 `;

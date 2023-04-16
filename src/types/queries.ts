@@ -1,3 +1,5 @@
 export const queries = `
-  type Query {}
+  type Query {
+    hello(name: String = "World"): String # TODO: Remove
+  }
 `;
