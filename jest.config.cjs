@@ -7,15 +7,15 @@ module.exports = {
     collectCoverage: true,
     transform: {
         '^.+.ts$': [
-            'ts-jest', {
+            'ts-jest',
+            {
                 isolatedModules: true,
-                tsconfig: 'tests/tsconfig.json'
-            }
-        ]
+                tsconfig: 'tests/tsconfig.json',
+            },
+        ],
     },
     collectCoverageFrom: ['src/resolvers/*.resolvers.{ts}'],
     moduleNameMapper: {
         '^(\\.{1,2}/.*)\\.js$': '$1',
-    }
-
-};
+    },
+}

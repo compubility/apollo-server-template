@@ -1,3 +1,3 @@
 export interface ServerContext {
-    name: string;
+    name: string
 }
