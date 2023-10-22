@@ -1,8 +1,12 @@
 import { GraphQLScalarType, Kind } from 'graphql'
+import GraphQLJSON from 'graphql-type-json';
+
 import { HelloResolvers } from './hello.resolvers.js'
+import {DBResolvers} from "./db.resolvers.js";
 
 export const resolvers = [
     {
+        JSON: GraphQLJSON,
         Date: new GraphQLScalarType({
             name: 'Date',
             description: 'Date custom scalar type',
@@ -24,6 +28,7 @@ export const resolvers = [
             },
         }),
     },
+    DBResolvers, // remove sample
     HelloResolvers, // remove sample
     // insert imported resolvers
 ]
